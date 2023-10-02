@@ -1,0 +1,13 @@
+{
+    "cSpell.words": [
+        "cpwd",
+        "myuser",
+        "numeris",
+        "signin",
+        "signout"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none"
+}

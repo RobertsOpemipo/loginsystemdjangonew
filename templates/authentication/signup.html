@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+</head>
+<body>
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                <strong>Message:</strong> {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                
+            </div>
+        {% endfor %}
+    <h3> SignUP </h3>
+
+    <form action="/signup" method="post">
+        {% csrf_token %}
+        <label for="">Username </label>
+        <input type="text" id="username" name="username" placeholder="Create a username(only letters and numbers) " required><br><br>
+        
+        <label for="">First Name </label>
+        <input type="text" id="fname" name="fname" placeholder="Enter first name " required><br><br>
+        
+        <label for="">Last Name </label>
+        <input type="text" id="lname" name="lname" placeholder="Enter last name " required><br><br>
+        
+        <label for="">Email Address </label>
+        <input type="email" id="email" name="email" placeholder="Enter email " required><br><br>
+        
+        <label for="">Password </label>
+        <input type="password" id="pwd" name="pwd" placeholder="Create a password" required><br><br>
+        
+        <label for="">Confirm your password </label>
+        <input type="password" id="cpwd" name="cpwd" placeholder="Confirm password" required><br><br>
+        
+        <button type="submit"> Sign Up </button>
+    </form>
+</body>
+</html>
